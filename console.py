@@ -13,5 +13,12 @@ vet_repository.save(vet1)
 pet1 = Pet("Lassie", "1/01/2019", "Rough Collie", "Joe Carraclough", "0123456789", "joe@gmail.com", "some notes", vet1)
 pet_repository.save(pet1)
 
+# vet1.name = "Dr Dolittle"
+# vet_repository.update(vet1)
+
+result = vet_repository.select_all()
+for vet in result:
+    print (vet.__dict__)
+
 pdb.set_trace()
 
