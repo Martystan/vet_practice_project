@@ -28,16 +28,16 @@ def select(id):
         vet = Vet(result['name'], result['id'])
         return vet
 
-# def update(vet):
-#     sql = "UPDATE vets SET (name, id) = (%s, %s) WHERE id = %s"
-#     values = [vet.name, vet.id]
-#     run_sql(sql, values)
+def update(vet):
+    sql = "UPDATE vets SET (name) = (%s) WHERE id = %s"
+    values = [vet.name, vet.id]
+    run_sql(sql, values)
 
 def delete_all():
     sql = "DELETE FROM vets"
     run_sql(sql)
 
-# def delete(id):
-#     sql = "DELETE FROM vets WHERE id = %s"
-#     values = [id]
-#     run_sql(sql,values)
+def delete(id):
+    sql = "DELETE FROM vets WHERE id = %s"
+    values = [id]
+    run_sql(sql,values)

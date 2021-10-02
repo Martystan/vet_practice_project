@@ -15,10 +15,14 @@ pet_repository.save(pet1)
 
 # vet1.name = "Dr Dolittle"
 # vet_repository.update(vet1)
+pet1.name = "whatevs"
+pet_repository.update(pet1)
 
-result = vet_repository.select_all()
-for vet in result:
-    print (vet.__dict__)
+for vet in vet_repository.select_all():
+    print(vet.__dict__)
+
+for pet in pet_repository.select_all():
+    print(pet.__dict__)
 
 pdb.set_trace()
 
