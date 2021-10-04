@@ -11,6 +11,28 @@ def pets():
     pets = pet_repository.select_all()
     return render_template("pets/index.html", all_pets = pets)
 
+@pets_blueprint.route("/pets/add", methods = ['GET'])
+def add_patient():
+    vets = vet_repository.select_all()
+    return render_template("/pets/add.html", all_vets = vets)
+
+@pets_blueprint.route("/pets", methods=['POST'])
+def create_pet():
+    name = request.form['name']
+    dob = request.form['dob']
+    type = request.form['type']
+    owner = request.form['owner']
+    owner_email = request.form['owner_email']
+    owner_tel = request.form['owner_tel']
+    notes = request.form['notes']
+    vet_id = request.form['vet_id']
+    vet = vet_repository.select(vet_id)
+    pet = Pet(name, dob, type, owner, owner_tel, owner_email, notes, vet)
+    pet_repository.save(pet)
+    return redirect('/pets')
+
+
+
 @pets_blueprint.route("/pets/<id>", methods = ['GET'])
 def show_pet_info(id):
     pet = pet_repository.select(id)
@@ -38,7 +60,6 @@ def update_pet(id):
     pet_repository.update(pet)
     return redirect("/pets/" + id)
 
-@pets_blueprint.route("/pets/new", methods = ['GET'])
-def add_patient():
-    vets = vet_repository.select_all()
-    render_template("pets/new.html", all_vets = vets)
+
+
+

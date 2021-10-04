@@ -34,7 +34,7 @@ def select(id):
 
 def update(pet):
     sql = "UPDATE pets SET(name, dob, type, owner, owner_tel, owner_email, notes, vet_id) = (%s,%s,%s,%s,%s,%s,%s,%s) WHERE id = %s"
-    values = [pet.name, pet.dob, pet.type, pet.owner, pet.owner_tel, pet.owner_email, pet.notes, pet.vet.id, pet.id]
+    values = [pet.name, pet.dob, pet.type, pet.owner, pet.owner_tel, pet.owner_email, pet.notes, pet.vet.id,pet.id]
     run_sql(sql, values)
 
 def delete_all():

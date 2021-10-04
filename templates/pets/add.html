@@ -1,3 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
 
+<form action = "/pets" method = "post">
+    <div>
+        <label for="name">Name:</label>
+        <input type = "text" id = "name" name = "name" required>
+    </div>
+    <div>
+        <label for="dob">DoB:</label>
+        <input type = "dob" id = "dob" name = "dob" required>
+    </div>
+    <div>
+        <label for="type">Type/Breed:</label>
+        <input type = "type" id = "type" name = "type" required>
+    </div>
+    <div>
+        <label for="owner">Owner:</label>
+        <input type = "owner" id = "owner" name = "owner" required>
+    </div>
+    <div>
+        <label for="owner_email">Email:</label>
+        <input type = "owner_email" id = "owner_email" name = "owner_email" required>
+    </div>
+    <div>
+        <label for="owner_tel">Phone:</label>
+        <input type = "owner_tel" id = "owner_tel" name = "owner_tel" required>
+    </div>
+    <div>
+        <label for="owner_tel">Phone:</label>
+        <input type = "owner_tel" id = "owner_tel" name = "owner_tel" required>
+    </div>
+    <div>
+        <label for="notes">Notes:</label>
+        <textarea name = "notes" id = "notes" rows = "2" cols = "30" required></textarea>
+      </div>
+    <div>
+        <label for="vet">Vet:</label>
+        <select id="vet" name="vet_id">
+            {% for vet in all_vets %}
+              <option value="{{ vet.id }}">{{ vet.name }}</option>
+            {% endfor %}
+          </select>
+    </div>
+<button type = "submit">Add new patient</button>
+</form>
+
+{% endblock %}
