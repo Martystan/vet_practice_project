@@ -19,17 +19,17 @@ pet_repository.save(pet1)
 pet2 = Pet("Crookshanks", "01/09/2010", "Persian", "Hermione Granger", "012345667788", "hermione@hogwarts.com", "some notes", vet2 )
 pet_repository.save(pet2)
 
-# vet1.name = "Dr Dolittle"
-# vet_repository.update(vet1)
+vet1.name = "Dr Dolittle"
+vet_repository.update(vet1)
 
-# pet1.name = "whatevs"
-# pet_repository.update(pet1)
+pet1.name = "whatevs"
+pet_repository.update(pet1)
 
-for vet in vet_repository.select_all():
-    print(vet.__dict__)
+# for vet in vet_repository.select_all():
+#     print(vet.__dict__)
 
-for pet in pet_repository.select_all():
-    print(pet.__dict__)
+# for pet in pet_repository.select_all():
+#     print(pet.__dict__)
 
 pdb.set_trace()
 

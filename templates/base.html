@@ -8,12 +8,14 @@
     <title>Document</title>
 </head>
 <body id = "main_container">
-    <header id = "column1">
+    <header id = "header"> Logo</header>
+    <sidebar id = "sidebar">
         
         <nav>
             <ul>
                 <li><a href = "/">Home</a></li>
                 <li><a href = "/pets">Patients</a></li>
+                <li><a href = "/pets/new">New Patient</a></li>
             </ul>
            
             
@@ -21,10 +23,11 @@
                 
             
         </nav>
+        </sidebar>
     </header>
-    <div id = "column2">
+    <main id = "main">
         {% block content %}
     {% endblock %}
-    </div>
+    </main>
 </body>
 </html>
