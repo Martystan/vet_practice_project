@@ -60,6 +60,10 @@ def update_pet(id):
     pet_repository.update(pet)
     return redirect("/pets/" + id)
 
+@pets_blueprint.route("/pets/<id>/delete", methods = ['POST'])
+def delete_pet(id):
+    pet_repository.delete(id)
+    return redirect("/pets")
 
 
 

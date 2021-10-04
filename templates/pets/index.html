@@ -6,7 +6,12 @@
         <div>
             <a href = "pets/{{pet.id}}">{{pet.name}}</a>
         </div>
-        
+        <div>
+            <form action="/pets/{{pet.id}}/delete" method="POST">
+                <button type = "submit" value = "delete">delete</button> 
+
+            </form>
+        </div>
     
 </div>
 {% endfor %}
