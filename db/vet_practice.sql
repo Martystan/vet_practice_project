@@ -15,5 +15,6 @@ CREATE TABLE pets(
     owner_tel VARCHAR(255),
     owner_email VARCHAR(255),
     notes TEXT,
-    vet_id INT REFERENCES vets(id)
+    vet_id INT REFERENCES vets(id),
+    
 );

@@ -1,4 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-This will be the home page. Depending on our UX we might have a dashboard here showing some stats for example.
+
+{% for pet in all_pets %}
+<div>
+        <div>
+            <a href = "pets/{{pet.id}}">{{pet.name}}</a>
+        </div>
+    
+</div>
+{% endfor %}
+
 {% endblock %}
