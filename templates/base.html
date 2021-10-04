@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
     <title>Document</title>
 </head>
-<body id = "main_container">
-    <header id = "header"> Logo</header>
+<body id = "body">
+    <header id = "header">
+        <p id = "header-text">Vet Practice Management Tool </p>
+    </header>
     <sidebar id = "sidebar">
         
         <nav>
             <ul>
-                <li><a href = "/">Home</a></li>
-                <li><a href = "/pets">Patients</a></li>
-                <li><a href = "/pets/add">New Patient</a></li>
+                <li class = "list-item"><a href = "/" class = "lists">Home</a></li>
+                <li class = "list-item"><a href = "/pets" class = "lists">Patients</a></li>
+                <li class = "list-item"><a href = "/pets/add" class = "lists">New Patient</a></li>
             </ul>
            
             
@@ -26,8 +30,14 @@
         </sidebar>
     </header>
     <main id = "main">
-        {% block content %}
+        
+            {% block content %}
     {% endblock %}
+        
+        
     </main>
+    <footer id = "footer">
+<p id = "footer-text">This is the footer.Will write something here later.</p>
+    </footer>
 </body>
 </html>

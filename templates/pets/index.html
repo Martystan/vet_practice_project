@@ -5,13 +5,14 @@
 <div>
         <div>
             <a href = "pets/{{pet.id}}">{{pet.name}}</a>
+            <div>
+                <form action="/pets/{{pet.id}}/delete" method="POST">
+                    <button type = "submit">Delete</button> 
+    
+                </form>
+            </div>
         </div>
-        <div>
-            <form action="/pets/{{pet.id}}/delete" method="POST">
-                <button type = "submit" value = "delete">delete</button> 
-
-            </form>
-        </div>
+        
     
 </div>
 {% endfor %}
