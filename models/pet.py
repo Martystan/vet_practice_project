@@ -1,6 +1,7 @@
 class Pet:
-    def __init__(self, name, dob, type, owner, owner_tel, owner_email, notes, vet, id = None):
+    def __init__(self, name, photo, dob, type, owner, owner_tel, owner_email, notes, vet, id = None):
         self.name = name
+        self.photo = photo
         self.dob = dob
         self.type = type
         self.owner = owner

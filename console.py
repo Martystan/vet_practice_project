@@ -13,10 +13,10 @@ vet_repository.save(vet1)
 vet2 = Vet("John Dolittle")
 vet_repository.save(vet2)
 
-pet1 = Pet("Lassie",  "01/01/2019", "Rough Collie", "Joe Carraclough", "0123456789", "joe@gmail.com", "some notes", vet1)
+pet1 = Pet("Lassie", "https://upload.wikimedia.org/wikipedia/commons/4/48/Rough_Collie_600.jpg",  "01/01/2019", "Rough Collie", "Joe Carraclough", "0123456789", "joe@gmail.com", "some notes", vet1)
 pet_repository.save(pet1)
 
-pet2 = Pet("Crookshanks", "01/09/2010", "Persian", "Hermione Granger", "012345667788", "hermione@hogwarts.com", "some notes", vet2 )
+pet2 = Pet("Crookshanks","https://s36537.pcdn.co/wp-content/uploads/2018/11/persian-cat-face.jpg.optimal.jpg", "01/09/2010", "Persian", "Hermione Granger", "012345667788", "hermione@hogwarts.com", "some notes", vet2 )
 pet_repository.save(pet2)
 
 # vet1.name = "Dr Dolittle"

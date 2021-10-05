@@ -19,6 +19,7 @@ def add_patient():
 @pets_blueprint.route("/pets", methods=['POST'])
 def create_pet():
     name = request.form['name']
+    photo = request.form['photo']
     dob = request.form['dob']
     type = request.form['type']
     owner = request.form['owner']
@@ -27,7 +28,7 @@ def create_pet():
     notes = request.form['notes']
     vet_id = request.form['vet_id']
     vet = vet_repository.select(vet_id)
-    pet = Pet(name, dob, type, owner, owner_tel, owner_email, notes, vet)
+    pet = Pet(name, photo, dob, type, owner, owner_tel, owner_email, notes, vet)
     pet_repository.save(pet)
     return redirect('/pets')
 
@@ -48,6 +49,7 @@ def edit_pet(id):
 def update_pet(id):
     print(request.form)
     name = request.form['name']
+    photo = request.form['photo']
     dob = request.form['dob']
     type = request.form['type']
     owner = request.form['owner']
@@ -56,7 +58,7 @@ def update_pet(id):
     notes = request.form['notes']
     vet_id = request.form['vet_id']
     vet = vet_repository.select(vet_id)
-    pet = Pet(name, dob, type, owner, owner_tel, owner_email, notes, vet, id)
+    pet = Pet(name, photo, dob, type, owner, owner_tel, owner_email, notes, vet, id)
     pet_repository.update(pet)
     return redirect("/pets/" + id)
 

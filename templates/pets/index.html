@@ -4,6 +4,7 @@
 {% for pet in all_pets %}
 <div>
         <div>
+            <img src = "{{pet.photo}}" alt = "Photo of the pet">
             <a href = "pets/{{pet.id}}">{{pet.name}}</a>
             <div>
                 <form action="/pets/{{pet.id}}/delete" method="POST">

@@ -5,8 +5,8 @@ import repositories.pet_repository as pet_repository
 import repositories.vet_repository as vet_repository
 
 def save(pet):
-    sql = "INSERT INTO pets(name, dob, type, owner, owner_tel, owner_email, notes, vet_id) VALUES (%s, %s,%s,%s,%s,%s,%s,%s) RETURNING *"
-    values = [pet.name, pet.dob, pet.type, pet.owner, pet.owner_tel, pet.owner_email, pet.notes, pet.vet.id]
+    sql = "INSERT INTO pets(name, photo, dob, type, owner, owner_tel, owner_email, notes, vet_id) VALUES (%s,%s, %s,%s,%s,%s,%s,%s,%s) RETURNING *"
+    values = [pet.name, pet.photo, pet.dob, pet.type, pet.owner, pet.owner_tel, pet.owner_email, pet.notes, pet.vet.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     pet.id = id
@@ -18,7 +18,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         vet = vet_repository.select(row['vet_id'])
-        pet = Pet(row['name'], row['dob'], row['type'], row['owner'], row['owner_tel'], row['owner_email'], row['notes'], vet, row['id'])
+        pet = Pet(row['name'],row['photo'] ,row['dob'], row['type'], row['owner'], row['owner_tel'], row['owner_email'], row['notes'], vet, row['id'])
         pets.append(pet)
     return(pets)
 
@@ -29,12 +29,12 @@ def select(id):
     result = run_sql(sql, values)[0]
     if result is not None:
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['name'], result['dob'], result['type'], result['owner'], result['owner_tel'], result['owner_email'], result['notes'], vet, result['id'])
+        pet = Pet(result['name'], result['photo'], result['dob'], result['type'], result['owner'], result['owner_tel'], result['owner_email'], result['notes'], vet, result['id'])
     return pet
 
 def update(pet):
-    sql = "UPDATE pets SET(name, dob, type, owner, owner_tel, owner_email, notes, vet_id) = (%s,%s,%s,%s,%s,%s,%s,%s) WHERE id = %s"
-    values = [pet.name, pet.dob, pet.type, pet.owner, pet.owner_tel, pet.owner_email, pet.notes, pet.vet.id,pet.id]
+    sql = "UPDATE pets SET(name, photo, dob, type, owner, owner_tel, owner_email, notes, vet_id) = (%s,%s,%s,%s,%s,%s,%s,%s,%s) WHERE id = %s"
+    values = [pet.name, pet.photo, pet.dob, pet.type, pet.owner, pet.owner_tel, pet.owner_email, pet.notes, pet.vet.id,pet.id]
     run_sql(sql, values)
 
 def delete_all():
