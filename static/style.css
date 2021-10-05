@@ -22,15 +22,12 @@ width: 100%;
 border-radius: 25px;}
         
 
-#footer {grid-area: footer;}
-    /* position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-    height: 30px} */
+#footer {grid-area: footer;
+    vertical-align: middle;   
+}
+    
 
-#body {
+#body {height: 100vh;
     background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210422/pngtree-abstract-polka-dot-grid-mint-green-background-image_637155.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,16 +38,15 @@ border-radius: 25px;}
     grid-template-areas:
     "header header header"
     "sidebar main main"
-    "footer footer footer ";
+    "footer footer footer";
     grid-template-columns: 20% 40% 40%;
-    margin-left: auto;
+    margin-left: -5%;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
     color:#210a72;
     padding: 5%;
-    border-style: solid;
-border-color: white;}
+    }
 
 #main-image {max-width: 70%;
 height: auto;
@@ -74,8 +70,10 @@ font-family: Andale Mono, monospace;
     list-style-type: none;}
 
     
-    #footer-text {margin:auto;
+#footer-text {margin:auto;
         padding: 5px;
+        padding-right: 20px;
+        text-align:justify;
         
 vertical-align: middle;
 text-align: center;
@@ -97,7 +95,8 @@ border-radius: 15%;
 padding: 10px;
 margin: 10%;
 width: 125px;
-height: 100px;}
+height: 100px;
+background-color: white;}
 
 #pet-label:hover {width: 175px;
 height: 125px;}
@@ -124,9 +123,24 @@ gap: 10px;}
 .edit-new { text-decoration: none;
 color:#210a72;
 border:solid;
-padding: 2px; 
+padding: 5px; 
 background-color: white;
-border-radius: 10%;}
+border-radius: 10%;
+border-width: 2px;}
+
+.form {display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: center;}
+
+.input {color:#210a72;
+    border:solid;
+    padding: 5px; 
+    background-color: white;
+    border-radius: 5%;
+    border-width: 2px;
+border-color: #66CCAA;;}
+
 
 
 

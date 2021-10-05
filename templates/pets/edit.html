@@ -1,49 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action = "/pets/{{pet.id}}" method = "post">
+<form class = "form" action = "/pets/{{pet.id}}" method = "post">
     <div>
-        <label for="name">Name:</label>
-        <input type= "text" id = "name" name = "name" value = "{{pet.name}}">
+        <label for="name">Name</label>
+        <input class = "input"  type= "text" id = "name" name = "name" value = "{{pet.name}}">
     </div>
     <div>
         <label for="photo">Photo url:</label>
-        <input type= "url" id = "photo" name = "photo" value = "{{pet.photo}}">
+        <input  class = "input" type= "url" id = "photo" name = "photo" value = "{{pet.photo}}">
     </div>
     <div>
         <label for="dob">DOB:</label>
-        <input type= "text" id = "dob" name = "dob" value = "{{pet.dob}}">
+        <input class = "input" type= "text" id = "dob" name = "dob" value = "{{pet.dob}}">
     </div>
     <div>
         <label for = "type">Type/Breed:</label>
-        <input type = "text" id = "type" name = "type" value = "{{pet.type}}">
+        <input  class = "input" type = "text" id = "type" name = "type" value = "{{pet.type}}">
     </div>
     <div>
         <label for = "owner">Owner:</label>
-        <input type = "text" id = "owner" name = "owner" value = "{{pet.owner}}">
+        <input class = "input" type = "text" id = "owner" name = "owner" value = "{{pet.owner}}">
     </div>
     <div>
         <label for = "owner_email">Email:</label>
-        <input type = "email" id = "owner_email" name = "owner_email" value = "{{pet.owner_email}}">
+        <input class = "input" type = "email" id = "owner_email" name = "owner_email" value = "{{pet.owner_email}}">
     </div>
     <div>
         <label for = "owner_tel">Phone:</label>
-        <input type = "tel" id = "owner_tel" name = "owner_tel" value = "{{pet.owner_tel}}">
+        <input class = "input" type = "tel" id = "owner_tel" name = "owner_tel" value = "{{pet.owner_tel}}">
     </div>
     <div>
         <label for="notes">Notes:</label>
-        <textarea name = "notes" id = "notes" rows = "2" cols = "30" value = "{{pet.notes}}"></textarea>
+        <textarea  class = "input" name = "notes" id = "notes" rows = "2" cols = "30" value = "{{pet.notes}}"></textarea>
       </div>
     <div>
         <label for = "vet">Vet:</label> 
-        <select id = "vet" name = "vet_id">
+        <select  class = "input" id = "vet" name = "vet_id">
             {% for vet in all_vets %}
             <option value = "{{vet.id}}"
             {% if pet.vet.id == vet.id %} selected = "selected" {% endif %}>{{vet.name}}</option>
              {% endfor %}
         </select>
     </div>
-    <button type = "submit"> Update patient record</button>
+    <button class = "edit-new" type = "submit"> Update patient record</button>
     
 </form>
 
