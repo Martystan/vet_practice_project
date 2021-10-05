@@ -3,12 +3,12 @@
 
 {% for pet in all_pets %}
 <div>
-        <div>
-            <img src = "{{pet.photo}}" alt = "Photo of the pet">
-            <a href = "pets/{{pet.id}}">{{pet.name}}</a>
+        <div id = "pet-label">
+            <img  id = "pet-photo" src = "{{pet.photo}}" alt = "Photo of the pet">
+            <a  id = "pet-name" href = "pets/{{pet.id}}">{{pet.name}}</a>
             <div>
                 <form action="/pets/{{pet.id}}/delete" method="POST">
-                    <button type = "submit">Delete</button> 
+                    <button id= "delete-button" type = "submit">Delete</button> 
     
                 </form>
             </div>

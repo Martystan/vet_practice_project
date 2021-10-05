@@ -1,14 +1,22 @@
 
     
 #sidebar {grid-area: sidebar;
-padding: 20px;}
+    border-right-color: white;
+    border-style: none solid none none;
+}
 
 #main {grid-area: main;
     margin-left: auto;
-    margin-right: auto;}
+    margin-right: auto;
+display: flex;
+flex-wrap: wrap;
+padding: 10px;
+justify-content: space-evenly;
+align-content: flex-start;
+gap:5px;}
 
 #header {grid-area: header;
-    background-image: url(https://media.gettyimages.com/videos/lens-flare-4k-resolution-video-id844268868?s=640x640);
+    /* background-image: url(https://media.gettyimages.com/videos/lens-flare-4k-resolution-video-id844268868?s=640x640); */
 /* background-color: #53bac1; */
 width: 100%;
 border-radius: 25px;}
@@ -23,7 +31,9 @@ border-radius: 25px;}
     height: 30px} */
 
 #body {
-    background-image: url(https://media.gettyimages.com/videos/lens-flare-4k-resolution-video-id844268868?s=640x640);
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210422/pngtree-abstract-polka-dot-grid-mint-green-background-image_637155.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: grid;
     grid-gap: 20px;
     font-family: Andale Mono, monospace;
@@ -32,12 +42,17 @@ border-radius: 25px;}
     "header header header"
     "sidebar main main"
     "footer footer footer ";
+    grid-template-columns: 20% 40% 40%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     color:#210a72;
-    }
+    padding: 5%;
+    border-style: solid;
+border-color: white;}
 
-#main-image {max-width: 100%;
+#main-image {max-width: 70%;
 height: auto;
 
 }
@@ -66,6 +81,55 @@ vertical-align: middle;
 text-align: center;
 
 }
+#pet-photo {width: 40%;
+border-radius: 40%}
+
+#pet-photo:hover {width:50%;}
+
+#pet-label {display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-style: solid;
+border-color: #66CCAA;
+border-width: 1px;
+border-radius: 15%;
+padding: 10px;
+margin: 10%;
+width: 125px;
+height: 100px;}
+
+#pet-label:hover {width: 175px;
+height: 125px;}
+
+#pet-name { text-decoration: none;
+color: #210a72}
+
+#pet-name:hover {text-decoration: underline;}
+
+#delete-button { border-color: white; 
+border-radius: 15%;
+color:#66CCAA;
+background-color: white;
+}
+
+ul{ display:flex;
+flex-direction: column;
+gap: 30px;}
+
+#show {display:flex;
+flex-wrap: wrap;
+gap: 10px;}
+
+.edit-new { text-decoration: none;
+color:#210a72;
+border:solid;
+padding: 2px; 
+background-color: white;
+border-radius: 10%;}
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
+<div id = "show">
+    <div>
     <p> Name: {{pet.name}}</p>
     <p>DOB: {{pet.dob}}</p>
     <p>Breed: {{pet.type}}</p>
@@ -9,6 +10,8 @@
     <p>Phone: {{pet.owner_tel}}</p>
     <p>Notes: {{pet.notes}}</p>
     <p>Vet: {{pet.vet.name}}</p>
-    <p><a href = "/pets/{{pet.id}}/edit">Edit</a></p>
+</div>
+    <img  id = "pet-photo" src = "{{pet.photo}}" alt = "Photo of the pet">
+    <p><a class = "edit-new" href = "/pets/{{pet.id}}/edit">Edit</a></p>
 </div>
 {% endblock %}
