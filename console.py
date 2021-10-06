@@ -31,19 +31,10 @@ pet_repository.save(pet5)
 pet6 = Pet("Marley", "http://media2.s-nbcnews.com/i/msnbc/Components/Photos/060123/060123_marleyandme_vmed_230p.jpg", "1/01/2010", "Labrador Retriever", "John Grogan", "098765432", "john@gmail.com", "Destructive but cute", vet2 )
 pet_repository.save(pet6)
 
+pet7 = Pet("Crookshanks","https://s36537.pcdn.co/wp-content/uploads/2018/11/persian-cat-face.jpg.optimal.jpg", "01/09/2010", "Persian", "Hermione Granger", "012345667788", "hermione@hogwarts.com", "some notes", vet2 )
+pet_repository.save(pet7)
 
-
-# vet1.name = "Dr Dolittle"
-# vet_repository.update(vet1)
-
-# pet1.name = "whatevs"
-# pet_repository.update(pet1)
-
-# for vet in vet_repository.select_all():
-#     print(vet.__dict__)
-
-# for pet in pet_repository.select_all():
-#     print(pet.__dict__)
+pet8 = Pet("Crookshanks","https://s36537.pcdn.co/wp-content/uploads/2018/11/persian-cat-face.jpg.optimal.jpg", "01/09/2010", "Persian", "Hermione Granger", "012345667788", "hermione@hogwarts.com", "some notes", vet2 )
+pet_repository.save(pet8)
 
 pdb.set_trace()
-
