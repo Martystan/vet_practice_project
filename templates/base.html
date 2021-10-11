@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body id = "body">
     <header id = "header">
-        <p id = "header-text">Vet Practice Management Tool </p>
+        <img id = "paw" src = "https://cdn-icons-png.flaticon.com/128/4787/4787144.png">
+        <div>
+        
+        <p id = "header-text"><b>vetACCESS</b></p>
+    </div>
+    
     </header>
     <sidebar id = "sidebar">
         
@@ -20,6 +28,7 @@
                 <li class = "list-item"><a href = "/" class = "lists">Home</a></li>
                 <li class = "list-item"><a href = "/pets" class = "lists">Patients</a></li>
                 <li class = "list-item"><a href = "/pets/add" class = "lists">New Patient</a></li>
+                <li class = "list-item"><a href = "/vets" class = "lists">Vet</a> </li>
             </ul>
            
             
@@ -37,7 +46,7 @@
         
     </main>
     <footer id = "footer">
-        <p id = "footer-text">This is the footer.Will write something here later.</p>
+        <p id = "footer-text">© Martyna</p>
             </footer>
 </body>
 </html>

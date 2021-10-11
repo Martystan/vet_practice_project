@@ -45,3 +45,8 @@ def delete(id):
     sql = "DELETE  FROM pets WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+
+
+
+

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for vet in all_vets %}
+
+        <div class = "pet-label">
+            
+            <a  class = "pet-name" href = "vets/{{vet.id}}">{{vet.name}}</a>
+            
+        
+        
+    
+</div>
+{% endfor %}
+
+{% endblock %}

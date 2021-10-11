@@ -14,31 +14,38 @@ align-content: flex-start;
 gap:5px;}
 
 #header {grid-area: header;
-    /* background-image: url(https://media.gettyimages.com/videos/lens-flare-4k-resolution-video-id844268868?s=640x640); */
-/* background-color: #53bac1; */
+  display: flex;
 width: 100%;
-border-radius: 25px;}
+justify-content: center;
+align-items: center;
+
+background-color: white;
+margin: auto;
+
+border-bottom-style: solid;
+border-bottom-color: #66CCAA}
         
 
-#footer {grid-area: footer;
+#footer {background-color: white;
+    grid-area: footer;
     vertical-align: middle;   
 }
     
 
-#body {height: 100vh;
+#body {
     background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210422/pngtree-abstract-polka-dot-grid-mint-green-background-image_637155.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
     grid-gap: 20px;
-    font-family: Andale Mono, monospace;
+    font-family:  Andale Mono, monospace;
     text-decoration: none;
     grid-template-areas:
     "header header header"
     "sidebar main main"
     "footer footer footer";
     grid-template-columns: 20% 40% 40%;
-    margin-left: -5%;
+    margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
@@ -53,26 +60,28 @@ height: auto;
 
 #header-text { margin:auto;
     padding: 20px;
-
+font-family: 'Gemunu Libre' Merienda;
 color:#210a72;
 text-align: center;
 vertical-align: middle;
-font-size: 30px;
-text-transform: uppercase;
-font-family: Andale Mono, monospace;
+font-size: 50px;
+
+
 }
 
-.lists {text-decoration: none;}
+.lists {text-decoration: none;
+font-size: 20px;}
 
 .list-item{
     list-style-type: none;}
+.list-item:hover {background-color: white;}
 
     
 #footer-text {margin:auto;
         padding: 5px;
         padding-right: 20px;
         text-align:justify;
-        
+        font-family: Andale Mono;
 vertical-align: middle;
 text-align: center;
 
@@ -82,7 +91,7 @@ border-radius: 40%}
 
 #pet-photo:hover {width:50%;}
 
-#pet-label {display: flex;
+.pet-label {display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -99,7 +108,7 @@ background-color: white;}
 #pet-label:hover {width: 175px;
 height: 125px;}
 
-#pet-name { text-decoration: none;
+.pet-name { text-decoration: none;
 color: #210a72}
 
 #pet-name:hover {text-decoration: underline;}
@@ -137,7 +146,11 @@ align-items: center;}
     background-color: white;
     border-radius: 5%;
     border-width: 2px;
-border-color: #66CCAA;;}
+border-color: #66CCAA;}
+
+#paw {height:100px;}
+
+#vetpet {display:flex}
 
 
 

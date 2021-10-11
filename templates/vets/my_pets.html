@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div id = "vetpet"></div>
+{{vet.name}} is looking after:
+
+{% for pet in all_pets %}
+
+<div class = "pet-label">
+    <img  id = "pet-photo" src = "{{pet.photo}}" alt = "Photo of the pet">
+    <a  class = "pet-name" href = "pets/{{pet.id}}">{{pet.name}}</a>
+    <div>
+            
+{% endfor %}
+</div>
+
+{% endblock %}
